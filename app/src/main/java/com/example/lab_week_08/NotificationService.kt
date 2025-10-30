@@ -41,8 +41,7 @@ class NotificationService : Service() {
         //'HandlerThread' provides the different thread for the process to be executed on,
         //while on the other hand, 'Handler' enqueues the process to HandlerThread to be executed.
         //Here, we're instantiating a new HandlerThread called "SecondThread"
-        //then we pass that HandlerThread into the main Handler called
-        serviceHandler
+        //then we pass that HandlerThread into the main Handler called serviceHandler
         val handlerThread = HandlerThread("SecondThread")
             .apply { start() }
         serviceHandler = Handler(handlerThread.looper)
